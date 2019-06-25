@@ -27,22 +27,22 @@
             background-color: white;
             /* border: 1px solid #555d8e; */
             box-shadow:
-                -1px -1px 0 #555d8e,
-                1px -1px 0 #555d8e,
-                -1px 1px 0 #555d8e,
-                1px 1px 0 #555d8e;
+                -1px -1px 0 #474d73,
+                1px -1px 0 #474d73,
+                -1px 1px 0 #474d73,
+                1px 1px 0 #474d73;
         }
 
         .headerMagic {
             font-family: 'Satisfy', cursive;
             font-size: 4rem;
-            border-bottom: 1px solid #555d8e;
-            /* color:white;
-            text-shadow:
-                -1px -1px 0 #555d8e,
-                1px -1px 0 #555d8e,
-                -1px 1px 0 #555d8e,
-                1px 1px 0 #555d8e; */
+            border-bottom: 1px solid #474d73;
+            
+        }
+        
+        .fancy{
+            font-family: 'Satisfy', cursive; 
+            font-size: 1.4rem;
         }
 
         form {
@@ -51,17 +51,30 @@
 
         label {
             /* font-weight: bold; */
-            font-size: 1.4rem;
             margin-bottom: 0;
         }
 
         #aboutYou {
-            border-bottom: 1px solid #555d8e;
+            border-bottom: 1px solid #474d73;
         }
 
         .btn-magic {
-            background-color: #555d8e;
+            background-color: #474d73;
             color: white;
+            
+            
+        }
+
+        .wizardDisplayPhoto {
+            width: 40%;
+        }
+
+        .muggleDisplayPhoto {
+            width: 40%;
+        }
+
+        .heartDisplayPhoto {
+            width: 10%;
         }
     </style>
 
@@ -78,24 +91,39 @@
 
 
         <form>
-
+            <div class= "fancy text-center">About You</div>
             <div class="form-group">
                 <label for="muggle-name">Name</label>
-                <input type="text" class="form-control" id="muggle-name" placeholder="Your Name Here">
+                <input type="text" class="form-control" id="muggle-name" placeholder="Your Name Here" >
             </div>
 
 
             <div class="form-group pb-4" id="aboutYou">
                 <label for="muggle-photo">Link to Photo Image</label>
-                <input type="text" class="form-control" id="muggle-photo" placeholder="Photo Link Here">
+                <input type="text" class="form-control" id="muggle-photo" placeholder="Photo Link Here" >
             </div>
 
 
+            <div class= "fancy text-center">Questions</div>
 
             <div class="form-group">
-                <label for="muggle-q1">Question 1: You would describe yourself as couragous, brave, and chivalrous.
+                <label for="muggle-q1"><span class= "fancy">Question 1: </span> <br>You would describe yourself as couragous, brave, and chivalrous?
                 </label>
-                <select class="form-control" id="muggle-q1">
+                <select class="form-control" id="muggle-q1" >
+                    <option value="">Click Here to Pick an Option</option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <div class="invalid-feedback">Example invalid custom select feedback</div>
+            </div>
+
+            <div class="form-group">
+                <label for="muggle-q2"><span class= "fancy">Question 2:</span> <br>You would describe yourself as hardworking, patient, and
+                    loyal?</label>
+                <select class="form-control" id="muggle-q2" >
                     <option value="">Click Here to Pick an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -106,22 +134,9 @@
             </div>
 
             <div class="form-group">
-                <label for="muggle-q2">Question 2: You would describe yourself as hardworking, patient, and
-                    loyal.</label>
-                <select class="form-control" id="muggle-q2">
-                    <option value="">Click Here to Pick an Option</option>
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="muggle-q3">Question 3: You would describe yourself as intelligent, creative, and value
+                <label for="muggle-q3"><span class= "fancy">Question 3: </span> <br>You would describe yourself as intelligent, creative, and value
                     learning.</label>
-                <select class="form-control" id="muggle-q3">
+                <select class="form-control" id="muggle-q3" >
                     <option value="">Click Here to Pick an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -132,9 +147,9 @@
             </div>
 
             <div class="form-group">
-                <label for="muggle-q4">Question 4: You would describe yourself as ambitious, cunning, and
+                <label for="muggle-q4"><span class= "fancy">Question 4: </span> <br>You would describe yourself as ambitious, cunning, and
                     resourceful.</label>
-                <select class="form-control" id="muggle-q4">
+                <select class="form-control" id="muggle-q4" >
                     <option value="">Click Here to Pick an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -145,8 +160,8 @@
             </div>
 
             <div class="form-group">
-                <label for="muggle-q5">Question 5: There is a troll in the dungeon. What do you do?</label>
-                <select class="form-control" id="muggle-q5">
+                <label for="muggle-q5"><span class= "fancy">Question 5: </span> <br>There is a troll in the dungeon. What do you do?</label>
+                <select class="form-control" id="muggle-q5" >
                     <option value="">Click Here to Pick an Option</option>
                     <option value="1">1 : Nothing you probably put it there.</option>
                     <option value="2">2 : Who cares. It's not your problem.</option>
@@ -157,8 +172,8 @@
             </div>
 
             <div class="form-group">
-                <label for="muggle-q6">Question 6: What are your feelings towards Quidditch?</label>
-                <select class="form-control" id="muggle-q6">
+                <label for="muggle-q6"><span class= "fancy">Question 6: </span> <br>What are your feelings towards Quidditch?</label>
+                <select class="form-control" id="muggle-q6" >
                     <option value="">Click Here to Pick an Option</option>
                     <option value="1">1 : Could not be less bothered.</option>
                     <option value="2">2</option>
@@ -169,22 +184,24 @@
             </div>
 
             <div class="form-group">
-                <label for="muggle-q7">Question 7: What are your feelings towards magical creatures?</label>
-                <select class="form-control" id="muggle-q7">
+                <label for="muggle-q7"><span class= "fancy">Question 7: </span> <br>What are your feelings towards magical creatures?</label>
+                <select class="form-control" id="muggle-q7" >
                     <option value="">Click Here to Pick an Option</option>
                     <option value="1">1 : They are second rate, and I am uninterested.</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5 : They are as much a part of the wizarding community as any witch or wizard.</option>
+                    <option value="5">5 : They are as much a part of the wizarding community as any witch or wizard.
+                    </option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="muggle-q8">Question 8: You have a test coming up how do you prepare?</label>
-                <select class="form-control" id="muggle-q8">
+                <label for="muggle-q8"><span class= "fancy">Question 8: </span> <br>You have a test coming up how do you prepare?</label>
+                <select class="form-control" id="muggle-q8" >
                     <option value="">Click Here to Pick an Option</option>
-                    <option value="1">1 : Who cares. You learn more from the world around you just be you, and you will learn through osmosis.</option>
+                    <option value="1">1 : Who cares. You learn more from the world around you just be you, and you will
+                        learn through osmosis.</option>
                     <option value="2">2</option>
                     <option value="3">3 : Attempt to study, but probably wind up in Hogsmeade with your pals.</option>
                     <option value="4">4</option>
@@ -193,8 +210,8 @@
             </div>
 
             <div class="form-group">
-                <label for="muggle-q9">Question 9: Do you have a wild side?</label>
-                <select class="form-control" id="muggle-q9">
+                <label for="muggle-q9"><span class= "fancy">Question 9: </span> <br>Do you have a wild side?</label>
+                <select class="form-control" id="muggle-q9" >
                     <option value="">Click Here to Pick an Option</option>
                     <option value="1">1 : I am as consistent as the Hogwarts Express(very consistent).</option>
                     <option value="2">2</option>
@@ -205,8 +222,8 @@
             </div>
 
             <div class="form-group">
-                <label for="muggle-q10">Question 10: What are your feelings on Voldemort and such?</label>
-                <select class="form-control" id="muggle-q10">
+                <label for="muggle-q10"><span class= "fancy">Question 10: </span> <br>What are your feelings on Voldemort and such?</label>
+                <select class="form-control" id="muggle-q10" >
                     <option value="">Click Here to Pick an Option</option>
                     <option value="1">1 : Literally the worst... he killed my parents?</option>
                     <option value="2">2 </option>
@@ -216,9 +233,10 @@
                 </select>
             </div>
 
-            
+
             <div class="text-center mb-4 mt-3">
-                <button type="submit" class="btn btn-magic submit">Submit <i class="fa fa-magic" aria-hidden="true"></i></button>
+                <button type="submit" class="btn btn-magic submit">Submit <i class="fa fa-magic"
+                        aria-hidden="true"></i></button>
             </div>
 
         </form>
@@ -234,20 +252,16 @@
 
 
     <div id="myModal" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
+                    <h5 class="modal-title">Your Wizarding Soulmate is:</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div id="modal-content"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -259,11 +273,19 @@
     <!-- Javascript -->
     <script type="text/javascript">
 
+
         //var wizards = require("../data/wizards");
 
 
         $(".submit").on("click", function (event) {
             event.preventDefault();
+
+            if($("#muggle-name").val().trim() == "" || $("#muggle-photo").val().trim()== "" || $("#muggle-q1").val().trim()==""||
+            $("#muggle-q2").val().trim()==""||$("#muggle-q3").val().trim()==""||$("#muggle-q4").val().trim()==""||$("#muggle-q5").val().trim()==""||
+            $("#muggle-q6").val().trim()==""||$("#muggle-q7").val().trim()==""||$("#muggle-q8").val().trim()==""||$("#muggle-q9").val().trim()==""||$("#muggle-q10").val().trim()==""){
+                alert("Please fill out all fields!");
+                return
+            }
 
             // Here we grab the form elements
             var newMuggle = {
@@ -292,56 +314,28 @@
                     matches.forEach(match => {
                         var html = `<h2>${match.name}</h2>
                         <img class="wizardDisplayPhoto" src="${match.photo}"/> 
-                        <img class="muggleDisplayPhoto" src="${newMuggle.photo}"/>`
+                        <img class="heartDisplayPhoto" src="http://clipart-library.com/images/kcKozdani.png"/>
+                        <img class="muggleDisplayPhoto" src="${newMuggle.photo}"/>
+                        <p>${match.description}</p> <br>`
                         $("#modal-content").append(html);
+
                     });
-                    //alert("you got a match!" + JSON.stringify(data))
-                    // Get the modal
-                    // var modal = document.getElementById("myModal");
 
-
-
-                    // // Get the <span> element that closes the modal
-                    // var span = document.getElementsByClassName("close")[0];
-
-
-                    // // $("#modal-content").append(JSON.stringify(data));
-                    // $("#modal-content").empty();
-                    // $("#modal-content").append("<img> <src='" +data.name+ "></img>");
-
-
-                    // When the user gets results 
-
-                    //     modal.style.display = "block";
-
-
-                    // // When the user clicks on <span> (x), close the modal
-                    // span.onclick = function () {
-                    //     modal.style.display = "none";
-                    // }
-
-                    // // When the user clicks anywhere outside of the modal, close it
-                    // window.onclick = function (event) {
-                    //     if (event.target == modal) {
-                    //         modal.style.display = "none";
-                    //     }
-                    // }
-                    //}
                     // Clear the form when submitting
 
                     $("#reserve-unique-id").val("");
                     $("#muggle-name").val("");
                     $("#muggle-photo").val("");
-                    $("#muggle-q1").val("1");
-                    $("#muggle-q2").val("1");
-                    $("#muggle-q3").val("1");
-                    $("#muggle-q4").val("1");
-                    $("#muggle-q5").val("1");
-                    $("#muggle-q6").val("1");
-                    $("#muggle-q7").val("1");
-                    $("#muggle-q8").val("1");
-                    $("#muggle-q9").val("1");
-                    $("#muggle-q10").val("1")
+                    $("#muggle-q1").val("");
+                    $("#muggle-q2").val("");
+                    $("#muggle-q3").val("");
+                    $("#muggle-q4").val("");
+                    $("#muggle-q5").val("");
+                    $("#muggle-q6").val("");
+                    $("#muggle-q7").val("");
+                    $("#muggle-q8").val("");
+                    $("#muggle-q9").val("");
+                    $("#muggle-q10").val("")
 
                     $("#myModal").modal("toggle")
                 });
