@@ -46,7 +46,7 @@ module.exports = function (app) {
 
 
         var totalDifferenceArray = [];
-        var sortedTotalDifferenceArray = [];
+        //var sortedTotalDifferenceArray = [];
         var matches = [];
 
         for (var i = 0; i < wizards.length; i++) {
@@ -68,7 +68,7 @@ module.exports = function (app) {
         }
 
         
-        sortedTotalDifferenceArray = totalDifferenceArray;
+        let sortedTotalDifferenceArray = Array.from(totalDifferenceArray);
         console.log("totalDifferenceArray outside for loop" + totalDifferenceArray);
         console.log("sortedTotalDifferenceArray" + sortedTotalDifferenceArray);
         sortedTotalDifferenceArray.sort((a, b) => a - b);
@@ -83,13 +83,14 @@ module.exports = function (app) {
             if(sortedTotalDifferenceArray[0] == totalDifferenceArray[m]){
                 console.log("totalDifferenceArray[m]" + totalDifferenceArray[m]);
                 console.log(m +"m")
-                matches.push(wizards[m]);
+                matches.push(m);
+                res.json(m);
             }
             
         }
         
         console.log(matches);
-        res.json(matches);
+        
 
         // THIS IS WHERE ALL THEE COMPARING FOR THE QUIZ IS GOING TO HAPPEN!!!!
 
