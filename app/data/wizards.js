@@ -2,7 +2,7 @@
 var wizards = [
     {
         name:"Harry Potter",
-        photo:"..images/harryPotter.gif",
+        photo:"https://media.giphy.com/media/o5HKScC1PflLO/giphy.gif",
         scores:[
             5,
             5,
@@ -19,7 +19,7 @@ var wizards = [
     },
     {
         name:"Ron Weasley",
-        photo:"..images/ronWeasley.gif",
+        photo:"https://media.giphy.com/media/o5HKScC1PflLO/giphy.gif",
         scores:[
             1,
             1,
@@ -35,7 +35,7 @@ var wizards = [
     },
     {
         name:"Hermione Granger",
-        photo:"..images/hermioneGranger.gif",
+        photo:"https://media.giphy.com/media/o5HKScC1PflLO/giphy.gif",
         scores:[
             2,
             2,

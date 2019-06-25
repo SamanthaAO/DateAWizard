@@ -83,14 +83,14 @@ module.exports = function (app) {
             if(sortedTotalDifferenceArray[0] == totalDifferenceArray[m]){
                 console.log("totalDifferenceArray[m]" + totalDifferenceArray[m]);
                 console.log(m +"m")
-                matches.push(m);
-                res.json(m);
+                matches.push(wizards[m]);
+                
             }
             
         }
         
         console.log(matches);
-        
+        res.json(matches);
 
         // THIS IS WHERE ALL THEE COMPARING FOR THE QUIZ IS GOING TO HAPPEN!!!!
 
