@@ -171,7 +171,7 @@
             var newMuggle = {
                 name: $("#muggle-name").val().trim(),
                 photo: $("#muggle-photo").val().trim(),
-                score: [$("#muggle-q1").val().trim(),
+                scores: [$("#muggle-q1").val().trim(),
                 $("#muggle-q2").val().trim(),
                 $("#muggle-q3").val().trim(),
                 $("#muggle-q4").val().trim(),
@@ -190,7 +190,7 @@
 
                     //function that displays match
                     if (data) {
-                        alert("you got a match!")
+                        alert("you got a match!" + JSON.stringify(data))
                     }
                     // Clear the form when submitting
 
@@ -217,6 +217,7 @@
     </script>
 
     <!-- Bootstrap -->
+    <!-- removed jquery from here becuase better package was needed for ajax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
