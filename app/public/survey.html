@@ -23,7 +23,7 @@
             ;
         }
 
-        .container {
+        .bigContainer {
             background-color: white;
             /* border: 1px solid #555d8e; */
             box-shadow:
@@ -76,6 +76,10 @@
         .heartDisplayPhoto {
             width: 10%;
         }
+
+        .footerLines{
+            color:white;
+        }
     </style>
 
 
@@ -85,7 +89,7 @@
 </head>
 
 <body>
-    <div class="container my-4">
+    <div class="container bigContainer my-4 pb-2">
 
         <h1 class="headerMagic text-center py-3">Survey</h1>
 
@@ -234,21 +238,21 @@
             </div>
 
 
-            <div class="text-center mb-4 mt-3">
+            <div class="text-center mb-4 mt-4">
                 <button type="submit" class="btn btn-magic submit">Submit <i class="fa fa-magic"
                         aria-hidden="true"></i></button>
             </div>
 
         </form>
 
-        <footer>
-            <a href="/api/wizards"> API Wizards List </a>|
-            <a href="/api/muggles"> API Muggles List </a>|
+    </div>
+    <div class="container text-center">
+    <footer>
+            <a href="/api/wizards"> API Wizards List </a><span class ="footerLines">|</span>
+            <a href="/api/muggles"> API Muggles List </a><span class ="footerLines">|</span>
             <a href="https://github.com/SamanthaAO/DateAWizard"> Github Repository</a>
         </footer>
-
     </div>
-
 
 
     <div id="myModal" class="modal" tabindex="-1" role="dialog">
