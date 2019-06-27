@@ -259,7 +259,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Your Wizarding Soulmate is:</h5>
+                    <h5 class="modal-title">Your Wizarding Soulmate/Soulmates:</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -277,10 +277,10 @@
     <!-- Javascript -->
     <script type="text/javascript">
 
-
+//this controls everythign after the sudmit button for the quiz is pressed.
         $(".submit").on("click", function (event) {
             event.preventDefault();
-
+//if all fields are not filled out then will not let them submit till they are
             if($("#muggle-name").val().trim() == "" || $("#muggle-photo").val().trim()== "" || $("#muggle-q1").val().trim()==""||
             $("#muggle-q2").val().trim()==""||$("#muggle-q3").val().trim()==""||$("#muggle-q4").val().trim()==""||$("#muggle-q5").val().trim()==""||
             $("#muggle-q6").val().trim()==""||$("#muggle-q7").val().trim()==""||$("#muggle-q8").val().trim()==""||$("#muggle-q9").val().trim()==""||$("#muggle-q10").val().trim()==""){
@@ -304,11 +304,13 @@
                 $("#muggle-q10").val().trim()]
             };
 
-            console.log(newMuggle);
+            //console.log(newMuggle);
 
+            //adds submission to muggles api
             $.post("/api/muggles", newMuggle,
                 function (matches) {
 
+                    //empties modal to then be filled with selected content
                     $("#modal-content").empty();
 
                     //function that displays match
@@ -322,7 +324,7 @@
 
                     });
 
-                    // Clear the form when submitting
+                    // Clear the form when submitting so is empty when user is done viewing modal
 
                     $("#reserve-unique-id").val("");
                     $("#muggle-name").val("");

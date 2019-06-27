@@ -1,4 +1,6 @@
 
+// shows all wizards in dating game
+
 var wizards = [
     {
         name:"Harry Potter",
@@ -50,7 +52,7 @@ var wizards = [
             2,
             2
             ],
-        description: "Born to unsuspecting muggle dentist parents I have since blossomed into brightest witch of my generation, so if you are ready to be wowed by my intelect you have come to the right place. I also enjoy cats... but not being one. "
+        description: "Born to unsuspecting muggle dentist parents I have since blossomed into the brightest witch of my generation, so if you are ready to be wowed by my intelect you have come to the right place. I also enjoy cats... but not being one. "
     },
     {
         name:"Voldemort",

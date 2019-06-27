@@ -19,7 +19,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/survey.html"));
   });
 
-
+//handlebars page
   app.get("/wizards", function(req, res) {
     res.render("singleWizards", {singleWizards: wizards});
   });

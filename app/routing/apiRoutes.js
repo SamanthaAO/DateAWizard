@@ -37,62 +37,59 @@ module.exports = function (app) {
 
     //*******************************************************************
     app.post("/api/muggles", function (req, res) {
-        //     // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-        //     // It will do this by sending out the value "true" have a table
-        //     // req.body is available since we're using the body parsing middleware
-
+       
+//this is what finds the soulmate!!!
         var singleMuggle = req.body;
+
+        //adds user input to muggles array
         muggles.push(singleMuggle);
 
 
         var totalDifferenceArray = [];
-        //var sortedTotalDifferenceArray = [];
         var matches = [];
 
+        //goes through every wizard
         for (var i = 0; i < wizards.length; i++) {
-            console.log("wizards[i]" + wizards[i]);
-            console.log(wizards[i].scores)
+            
             var tempDifferenceArray = [];
             var total = 0;
-
+//compares each score for each wizard agains each score for the input
             for (var k = 0; k < wizards[i].scores.length; k++) {
+                //adds absolute values to a temporary array
                 tempDifferenceArray.push(Math.abs(wizards[i].scores[k] - singleMuggle.scores[k]));
             }
 
-            
+            //sums all numbers in temp difference array
             total = tempDifferenceArray.reduce((x, y) => x + y)
 
+            //adds these values to total difference array
             totalDifferenceArray.push(total);
-            console.log("totalDifferenceArray" + totalDifferenceArray)
+            
 
         }
 
+        //this creates a completely new deep array not a shallow array
+        var sortedTotalDifferenceArray = Array.from(totalDifferenceArray);
         
-        let sortedTotalDifferenceArray = Array.from(totalDifferenceArray);
-        console.log("totalDifferenceArray outside for loop" + totalDifferenceArray);
-        console.log("sortedTotalDifferenceArray" + sortedTotalDifferenceArray);
+        //sorts the copy of total difference array to make the lowest on the bottom
         sortedTotalDifferenceArray.sort((a, b) => a - b);
 
-        console.log(totalDifferenceArray + "totalDifferenceArray after sorting function");
-        
-        console.log("sortedTotalDifferenceArray" + sortedTotalDifferenceArray)
-        console.log(sortedTotalDifferenceArray[0]);
-
+        //compares each number in the total difference array to the lowest score so that we can find position in wizards array of lowest score
         for(var m = 0; m < totalDifferenceArray.length; m++){
-            
+            //when they are equal push to matches
             if(sortedTotalDifferenceArray[0] == totalDifferenceArray[m]){
-                console.log("totalDifferenceArray[m]" + totalDifferenceArray[m]);
-                console.log(m +"m")
                 matches.push(wizards[m]);
                 
             }
             
         }
         
-        console.log(matches);
+        //console.log(matches);
+
+        //response from server is matches
         res.json(matches);
 
-        // THIS IS WHERE ALL THEE COMPARING FOR THE QUIZ IS GOING TO HAPPEN!!!!
+        
 
         
 
