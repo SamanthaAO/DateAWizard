@@ -1,10 +1,31 @@
-
-<h1>All Wizards</h1>
+<div class="container bigContainer my-4 pb-2">
+<h1 class=" text-center headerMagic">All Wizards</h1>
 
 
 {{#each singleWizards}}
-  <p>Name: {{name}}</p>
-  <img src="{{photo}}">
-  <p>Blurb: {{description}}</p>
+  <div class ="fancy">{{name}}</div>
+  <img class ="image" src="{{photo}}" alt="{{name}}">
+  <p><strong>Blurb: </strong>{{description}}</p>
   <hr>
 {{/each}}
+
+{{!-- {{#each singleWizards}}
+<div class="card w-25" style="width: 18rem;">
+  <img class="card-img-top" src="{{photo}}" alt="{{name}}">
+  <div class="card-body">
+    <div class ="fancy">{{name}}</div>
+    <p class="card-text">{{description}}.</p>
+  </div>
+</div>
+</div>
+{{/each}} --}}
+
+</div>
+
+<div class="container text-center">
+        <footer>
+            <a href="/api/wizards"> API Wizards List </a>|
+            <a href="/api/muggles"> API Muggles List </a>|
+            <a href="https://github.com/SamanthaAO/DateAWizard"> Github Repository</a>
+        </footer>
+    </div>
